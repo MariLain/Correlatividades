@@ -1,3 +1,3 @@
 # Correlatividades
 Tarea DDS
-![Primer Diagrama](Diagrama.png)
+![Primer Diagrama](Diagrama.PNG)
