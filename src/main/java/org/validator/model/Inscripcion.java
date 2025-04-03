@@ -8,6 +8,11 @@ public class Inscripcion {
 
     private Alumno alumno;
 
+    public Inscripcion(List<Materia> materias, Alumno alumno) {
+        this.materias = materias;
+        this.alumno = alumno;
+    }
+
     public boolean aprobada() {
         List<Materia> aprobadas = alumno.getAprobadas();
         List<Materia> necesarias = materias.stream()
