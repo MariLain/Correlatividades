@@ -4,4 +4,8 @@ import java.util.List;
 
 public class Alumno {
     private List<Materia> aprobadas;
+
+    public List<Materia> getAprobadas() {
+        return aprobadas;
+    }
 }

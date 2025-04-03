@@ -3,9 +3,17 @@ package org.validator.model;
 import java.util.List;
 
 public class Inscripcion {
+
     private List<Materia> materias;
 
+    private Alumno alumno;
+
     public boolean aprobada() {
-        return false;
+        List<Materia> aprobadas = alumno.getAprobadas();
+        List<Materia> necesarias = materias.stream()
+                .flatMap(materia -> materia.getCorrelativas().stream())
+                .distinct()
+                .toList();
+        return aprobadas.containsAll(necesarias);
     }
 }
