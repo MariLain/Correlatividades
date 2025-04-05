@@ -1,0 +1,23 @@
+'https://plantuml.com/sequence-diagram
+
+@startuml
+class Alumno {
+    -materias: List<Materia>
+}
+
+class Inscripcion {
+    -materias: List<Materia>
+    -alumno: Alumno
+    +aprobada(): boolean
+}
+
+class Materia {
+    -correlativas: List<Materia>
+}
+
+' Relaciones
+Alumno  --> "*" Materia
+Inscripcion  --> "*" Materia
+Inscripcion  -->  Alumno
+Materia "*" --> "*" Materia
+@enduml
