@@ -18,6 +18,6 @@ class Materia {
 ' Relaciones
 Alumno  --> "*" Materia
 Inscripcion  --> "*" Materia
-Inscripcion  -->  Alumno
+Inscripcion  o--  Alumno
 Materia "*" --> "*" Materia
 @enduml
